@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/cayasso/cacheman#readme"
-
-    >cacheman (v2.2.1)</a>
+    <a href="https://github.com/cayasso/cacheman#readme">cacheman (v2.2.1)</a>
 </h1>
 <h4>Small and efficient cache provider for Node.JS with In-memory, Redis and MongoDB engines</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.cacheman">module cacheman</a><ol>
 
@@ -136,11 +129,11 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function Cacheman(name) {
-  var options = arguments.length &#x3c;= 1 || arguments[1] === undefined ? {} : arguments[1];
+  var options = arguments.length &lt;= 1 || arguments[1] === undefined ? {} : arguments[1];
 
   _classCallCheck(this, Cacheman);
 
-  if (name &#x26;&#x26; &#x27;object&#x27; === (typeof name === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(name))) {
+  if (name &amp;&amp; 'object' === (typeof name === 'undefined' ? 'undefined' : _typeof(name))) {
     options = name;
     name = null;
   }
@@ -153,19 +146,19 @@
 
   var _options = options;
   var _options$prefix = _options.prefix;
-  var prefix = _options$prefix === undefined ? &#x27;cacheman&#x27; : _options$prefix;
+  var prefix = _options$prefix === undefined ? 'cacheman' : _options$prefix;
   var _options$engine = _options.engine;
-  var engine = _options$engine === undefined ? &#x27;memory&#x27; : _options$engine;
+  var engine = _options$engine === undefined ? 'memory' : _options$engine;
   var _options$delimiter = _options.delimiter;
-  var delimiter = _options$delimiter === undefined ? &#x27;:&#x27; : _options$delimiter;
+  var delimiter = _options$delimiter === undefined ? ':' : _options$delimiter;
   var _options$ttl = _options.ttl;
   var ttl = _options$ttl === undefined ? 60 : _options$ttl;
 
-  if (&#x27;string&#x27; === typeof ttl) {
+  if ('string' === typeof ttl) {
     ttl = Math.round((0, _ms2.default)(ttl) / 1000);
   }
 
-  prefix = [prefix, name || &#x27;cache&#x27;, &#x27;&#x27;].join(delimiter);
+  prefix = [prefix, name || 'cache', ''].join(delimiter);
   this.options = _extends({}, options, { Promise: _Promise, delimiter: delimiter, prefix: prefix, ttl: ttl, count: 1000 });
   this._prefix = prefix;
   this._ttl = ttl;
@@ -187,11 +180,11 @@
     <li>description and source-code<pre class="apidocCodePre">function CachemanError(message, logger) {
   _classCallCheck(this, CachemanError);
 
-  _get(Object.getPrototypeOf(CachemanError.prototype), &#x27;constructor&#x27;, this).call(this, message);
+  _get(Object.getPrototypeOf(CachemanError.prototype), 'constructor', this).call(this, message);
   this.name = this.constructor.name;
   this.message = message;
   Error.captureStackTrace(this, this.constructor.name);
-  if (logger) logger.emit(&#x27;error&#x27;, this);
+  if (logger) logger.emit('error', this);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -230,11 +223,11 @@
     <li>description and source-code<pre class="apidocCodePre">function CachemanError(message, logger) {
   _classCallCheck(this, CachemanError);
 
-  _get(Object.getPrototypeOf(CachemanError.prototype), &#x27;constructor&#x27;, this).call(this, message);
+  _get(Object.getPrototypeOf(CachemanError.prototype), 'constructor', this).call(this, message);
   this.name = this.constructor.name;
   this.message = message;
   Error.captureStackTrace(this, this.constructor.name);
-  if (logger) logger.emit(&#x27;error&#x27;, this);
+  if (logger) logger.emit('error', this);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -266,3 +259,4 @@
     ]
 </div>
 </div>
+</body></html>

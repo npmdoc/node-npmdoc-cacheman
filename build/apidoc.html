@@ -63,7 +63,60 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.cacheman.cacheman">
+            function <span class="apidocSignatureSpan"></span>cacheman
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cacheman.error">
+            function <span class="apidocSignatureSpan">cacheman.</span>error
+            <span class="apidocSignatureSpan">(message, logger)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cacheman.toString">
+            function <span class="apidocSignatureSpan">cacheman.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cacheman.</span>engines</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cacheman.error">module cacheman.error</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cacheman.error.error">
+            function <span class="apidocSignatureSpan">cacheman.</span>error
+            <span class="apidocSignatureSpan">(message, logger)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cacheman.toString">module cacheman.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cacheman.toString.toString">
+            function <span class="apidocSignatureSpan">cacheman.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
 
         </li>
 
@@ -74,6 +127,135 @@
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.cacheman" id="apidoc.module.cacheman">module cacheman</a></h1>
 
+
+    <h2>
+        <a href="#apidoc.element.cacheman.cacheman" id="apidoc.element.cacheman.cacheman">
+        function <span class="apidocSignatureSpan"></span>cacheman
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Cacheman(name) {
+  var options = arguments.length &#x3c;= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+  _classCallCheck(this, Cacheman);
+
+  if (name &#x26;&#x26; &#x27;object&#x27; === (typeof name === &#x27;undefined&#x27; ? &#x27;undefined&#x27; : _typeof(name))) {
+    options = name;
+    name = null;
+  }
+
+  var _Promise = options.Promise || function () {
+    try {
+      return Promise;
+    } catch (e) {}
+  }();
+
+  var _options = options;
+  var _options$prefix = _options.prefix;
+  var prefix = _options$prefix === undefined ? &#x27;cacheman&#x27; : _options$prefix;
+  var _options$engine = _options.engine;
+  var engine = _options$engine === undefined ? &#x27;memory&#x27; : _options$engine;
+  var _options$delimiter = _options.delimiter;
+  var delimiter = _options$delimiter === undefined ? &#x27;:&#x27; : _options$delimiter;
+  var _options$ttl = _options.ttl;
+  var ttl = _options$ttl === undefined ? 60 : _options$ttl;
+
+  if (&#x27;string&#x27; === typeof ttl) {
+    ttl = Math.round((0, _ms2.default)(ttl) / 1000);
+  }
+
+  prefix = [prefix, name || &#x27;cache&#x27;, &#x27;&#x27;].join(delimiter);
+  this.options = _extends({}, options, { Promise: _Promise, delimiter: delimiter, prefix: prefix, ttl: ttl, count: 1000 });
+  this._prefix = prefix;
+  this._ttl = ttl;
+  this._fns = [];
+  this.engine(engine);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cacheman.error" id="apidoc.element.cacheman.error">
+        function <span class="apidocSignatureSpan">cacheman.</span>error
+        <span class="apidocSignatureSpan">(message, logger)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CachemanError(message, logger) {
+  _classCallCheck(this, CachemanError);
+
+  _get(Object.getPrototypeOf(CachemanError.prototype), &#x27;constructor&#x27;, this).call(this, message);
+  this.name = this.constructor.name;
+  this.message = message;
+  Error.captureStackTrace(this, this.constructor.name);
+  if (logger) logger.emit(&#x27;error&#x27;, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cacheman.toString" id="apidoc.element.cacheman.toString">
+        function <span class="apidocSignatureSpan">cacheman.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cacheman.error" id="apidoc.module.cacheman.error">module cacheman.error</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cacheman.error.error" id="apidoc.element.cacheman.error.error">
+        function <span class="apidocSignatureSpan">cacheman.</span>error
+        <span class="apidocSignatureSpan">(message, logger)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CachemanError(message, logger) {
+  _classCallCheck(this, CachemanError);
+
+  _get(Object.getPrototypeOf(CachemanError.prototype), &#x27;constructor&#x27;, this).call(this, message);
+  this.name = this.constructor.name;
+  this.message = message;
+  Error.captureStackTrace(this, this.constructor.name);
+  if (logger) logger.emit(&#x27;error&#x27;, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cacheman.toString" id="apidoc.module.cacheman.toString">module cacheman.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cacheman.toString.toString" id="apidoc.element.cacheman.toString.toString">
+        function <span class="apidocSignatureSpan">cacheman.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
 
 
 </div>
