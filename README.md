@@ -1,9 +1,14 @@
-# api documentation for  [cacheman (v2.2.1)](https://github.com/cayasso/cacheman#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cacheman.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cacheman) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cacheman.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cacheman)
+# npmdoc-cacheman
+
+#### api documentation for  [cacheman (v2.2.1)](https://github.com/cayasso/cacheman#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cacheman.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cacheman) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cacheman.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cacheman)
+
 #### Small and efficient cache provider for Node.JS with In-memory, Redis and MongoDB engines
 
-[![NPM](https://nodei.co/npm/cacheman.png?downloads=true)](https://www.npmjs.com/package/cacheman)
+[![NPM](https://nodei.co/npm/cacheman.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/cacheman)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-cacheman/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-cacheman_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-cacheman/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-cacheman/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-cacheman/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-cacheman/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-cacheman/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-cacheman/build/screenCapture.npmPackageListing.svg)
 
@@ -17,8 +22,7 @@
 
 {
     "author": {
-        "name": "Jonathan Brumley",
-        "email": "cayasso@gmail.com"
+        "name": "Jonathan Brumley"
     },
     "bugs": {
         "url": "https://github.com/cayasso/cacheman/issues"
@@ -62,13 +66,11 @@
     "main": "./node/index",
     "maintainers": [
         {
-            "name": "cayasso",
-            "email": "cayasso@gmail.com"
+            "name": "cayasso"
         }
     ],
     "name": "cacheman",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/cayasso/cacheman.git"
@@ -80,17 +82,6 @@
     "version": "2.2.1"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module cacheman](#apidoc.module.cacheman)
-1.  object <span class="apidocSignatureSpan">cacheman.</span>engines
-
-
-
-# <a name="apidoc.module.cacheman"></a>[module cacheman](#apidoc.module.cacheman)
 
 
 
