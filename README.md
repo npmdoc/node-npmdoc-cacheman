@@ -1,6 +1,6 @@
 # npmdoc-cacheman
 
-#### api documentation for  [cacheman (v2.2.1)](https://github.com/cayasso/cacheman#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cacheman.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cacheman) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cacheman.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cacheman)
+#### basic api documentation for  [cacheman (v2.2.1)](https://github.com/cayasso/cacheman#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cacheman.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cacheman) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cacheman.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cacheman)
 
 #### Small and efficient cache provider for Node.JS with In-memory, Redis and MongoDB engines
 
@@ -79,7 +79,8 @@
         "prepublish": "make",
         "test": "make test"
     },
-    "version": "2.2.1"
+    "version": "2.2.1",
+    "bin": {}
 }
 ```
 
